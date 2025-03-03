@@ -99,21 +99,11 @@ function nekshor_style() {
         secondes_text.innerHTML = "Secondes";
         secondes.appendChild(secondes_text);
 
-        function formatDateForGoogleCalendar(date) {
-            const pad = (num) => num.toString().padStart(2, "0");
-
-            const year = date.getFullYear();
-            const month = pad(date.getMonth() + 1); // Les mois commencent à 0
-            const day = pad(date.getDate());
-            const hours = pad(date.getHours());
-            const minutes = pad(date.getMinutes());
-            const seconds = pad(date.getSeconds());
-
-            return `${year}${month}${day}T${hours}${minutes}${seconds}`;
-        }
-
-        var url = "https://www.google.com/calendar/render?action=TEMPLATE&text=" + element.name + "&dates=" + formatDateForGoogleCalendar(date) + "/" + formatDateForGoogleCalendar(date) + "&details=&location=&sf=true&output=xml";
-
+        console.log(element)
+        var eventDate = new Date(element.date);
+        var endDate = new Date(eventDate.getTime() + 60 * 60 * 1000); // Ajoute 1 heure à la date de début
+        var url = "https://www.google.com/calendar/render?action=TEMPLATE&text=" + element.name + "&dates=" + eventDate.toISOString().replace(/-|:|\.\d+/g, "").replace(/T/g, "") + "/" + endDate.toISOString().replace(/-|:|\.\d+/g, "").replace(/T/g, "") + "&details=&location=&sf=true&output=xml";
+        console.log(url)
         newElement.setAttribute("onclick", "openlink('" + url + "')");
 
         newElement.appendChild(date);
