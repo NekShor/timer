@@ -103,7 +103,7 @@ function nekshor_style() {
             var eventDate = new Date(element.date);
             var url = "https://www.google.com/calendar/render?action=TEMPLATE&text=" + element.name + "&dates=" + eventDate.toISOString().replace(/-|:|\.\d+/g, "").replace(/T/g, "/") + "/" + eventDate.toISOString().replace(/-|:|\.\d+/g, "").replace(/T/g, "/") + "&details=&location=&sf=true&output=xml";
 
-            document.location = url;
+            window.open(url, "_blank");
         }
 
         newElement.appendChild(date);
