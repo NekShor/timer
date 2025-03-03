@@ -99,6 +99,13 @@ function nekshor_style() {
         secondes_text.innerHTML = "Secondes";
         secondes.appendChild(secondes_text);
 
+        newElement.onclick = function () {
+            var url = "https://www.google.com/calendar/render?action=TEMPLATE&text=" + element.name + "&dates=" + date.toISOString().replace(/-|:|\.\d+/g, "").replace(/T/g, "/") + "/" + date.toISOString().replace(/-|:|\.\d+/g, "").replace(/T/g, "/") + "&details=&location=&sf=true&output=xml";
+
+            document.location = url;
+
+        }
+
         newElement.appendChild(date);
 
         var text = document.querySelector("#nekshor_style .text");

@@ -28,7 +28,7 @@ body {
     /* background: linear-gradient(to right, #CFE0FF, #8BD59E); */
     z-index: 1;
     position: absolute;
-    bottom: 0;
+    bottom: -70px;
 
 }
 
@@ -186,6 +186,31 @@ h6 {
     color: #a1d9bd;
 }
 
+.nekshor:hover {
+    background-color: white;
+    color: #bcdde3;
+}
+
+.nekshor:hover .jours {
+    color: white;
+    background-color: #bbdde2;
+}
+
+.nekshor:hover .heures {
+    color: white;
+    background-color: #b3dcd8;
+}
+
+.nekshor:hover .minutes {
+    color: white;
+    background-color: #abdacb;
+}
+
+.nekshor:hover .secondes {
+    color: white;
+    background-color: #a1d9bd;
+}
+
 /* for mobile */
 @media only screen and (max-width: 768px) {
     .text {
@@ -203,6 +228,10 @@ h6 {
 
     .nekshor .dateTileText {
         font-size: 0.9em;
+    }
+
+    .nekshor p {
+        margin: 10px;
     }
 }
 
@@ -222,5 +251,9 @@ h6 {
 
     .nekshor .dateTileText {
         font-size: 0.9em;
+    }
+
+    .nekshor p {
+        margin: 10px;
     }
 }
