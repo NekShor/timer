@@ -40,6 +40,7 @@ function nekshor_style() {
         jours_text.classList.add("jours_text");
         jours_text.classList.add("dateTileText");
         jours_text.innerHTML = "Jours";
+        jours.appendChild(jours_text);
 
         var heures = document.createElement("div");
         heures.classList.add("heures");
