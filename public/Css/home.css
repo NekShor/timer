@@ -148,6 +148,14 @@ h6 {
 
     }
 
+    .nekshor .dateTileValue {
+        font-size: 2em;
+    }
+
+    .nekshor .dateTileText {
+        font-size: 0.9em;
+    }
+
 }
 
 @media only screen and (max-width: 1200px) and (min-width: 768px) {}
@@ -177,11 +185,16 @@ h6 {
     padding: 10px;
     flex-direction: column;
     margin: 10px;
+    min-width: 100px;
 }
 
-.nekshor .dateTileValue {}
+.nekshor .dateTileValue {
+    font-size: 2.5em;
+}
 
-.nekshor .dateTileText {}
+.nekshor .dateTileText {
+    font-size: 2em;
+}
 
 .nekshor .jours {
     color: #bbdde2;
