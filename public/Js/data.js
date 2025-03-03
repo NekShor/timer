@@ -110,7 +110,11 @@ function updateDate() {
         var hours = Math.floor(diff / (1000 * 60 * 60) % 24);
         var minutes = Math.floor(diff / (1000 * 60) % 60);
         var seconds = Math.floor(diff / 1000 % 60);
-        element.innerHTML = days + " days " + hours + " hours " + minutes + " minutes " + seconds + " seconds";
+
+        element.querySelector(".jours_value").innerHTML = days;
+        element.querySelector(".heures_value").innerHTML = hours;
+        element.querySelector(".minutes_value").innerHTML = minutes;
+        element.querySelector(".secondes_value").innerHTML = seconds;
     });
 }
 
