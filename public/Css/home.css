@@ -102,7 +102,7 @@ body {
     font-size: 2em;
     font-weight: 600;
     font-family: 'Poppins', sans-serif;
-    width: 80%;
+    width: auto;
 
 }
 
@@ -176,6 +176,8 @@ h6 {
 
 .nekshor p {
     display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .nekshor .dateTile {
@@ -187,4 +189,13 @@ h6 {
     align-items: center;
     padding: 10px;
     flex-direction: column;
+    margin: 10px;
+}
+
+.nekshor .dateTileValue {
+    color: #8BD59E;
+}
+
+.nekshor .dateTileText {
+    color: #CFE0FF
 }
