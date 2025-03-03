@@ -1,7 +1,12 @@
 var date = [
     {
-        "name": "test",
-        "date": "2021-01-01 00:00:00",
+        "name": "Carnaval",
+        "date": "2025-04-03 14:00:00",
+        "importance": 1
+    },
+    {
+        "name": "Espagna Gang",
+        "date": "2025-05-06 09:55:00",
         "importance": 1
     }
 ]
@@ -21,6 +26,26 @@ function nekshor_style() {
         date.setAttribute("data-date", element.date);
         date.classList.add("date");
 
+        var jours = document.createElement("div");
+        jours.classList.add("jours");
+        jours.classList.add("dateTile");
+        date.appendChild(jours);
+
+        var heures = document.createElement("div");
+        heures.classList.add("heures");
+        heures.classList.add("dateTile");
+        date.appendChild(heures);
+
+        var minutes = document.createElement("div");
+        minutes.classList.add("minutes");
+        minutes.classList.add("dateTile");
+        date.appendChild(minutes);
+
+        var secondes = document.createElement("div");
+        secondes.classList.add("secondes");
+        secondes.classList.add("dateTile");
+        date.appendChild(secondes);
+
         newElement.appendChild(date);
 
         var text = document.querySelector("#nekshor_style .text");
@@ -33,7 +58,7 @@ document.addEventListener("DOMContentLoaded", function () {
     nekshor_style();
 });
 
-setTimeout(() => {
+function updateDate() {
     document.querySelectorAll(".date").forEach(element => {
         var date = new Date(element.getAttribute("data-date"));
         var now = new Date();
@@ -44,4 +69,10 @@ setTimeout(() => {
         var seconds = Math.floor(diff / 1000 % 60);
         element.innerHTML = days + " days " + hours + " hours " + minutes + " minutes " + seconds + " seconds";
     });
-}, 1000);
+}
+
+updateDate();
+
+setInterval(() => {
+    updateDate();
+}, 500);
