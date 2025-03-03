@@ -99,12 +99,7 @@ function nekshor_style() {
         secondes_text.innerHTML = "Secondes";
         secondes.appendChild(secondes_text);
 
-        newElement.onclick = function () {
-            var eventDate = new Date(element.date);
-            var url = "https://www.google.com/calendar/render?action=TEMPLATE&text=" + element.name + "&dates=" + eventDate.toISOString().replace(/-|:|\.\d+/g, "").replace(/T/g, "/") + "/" + eventDate.toISOString().replace(/-|:|\.\d+/g, "").replace(/T/g, "/") + "&details=&location=&sf=true&output=xml";
-
-            window.open(url, "_blank");
-        }
+        newElement.setAttribute("onclick", "openlink('https://www.google.com/calendar/render?action=TEMPLATE&text=" + element.name + "&dates=" + eventDate.toISOString().replace(/-|:|\.\d+/g, "").replace(/T/g, "/") + "/" + eventDate.toISOString().replace(/-|:|\.\d+/g, "").replace(/T/g, "/") + "&details=&location=&sf=true&output=xml)'");
 
         newElement.appendChild(date);
 
@@ -144,3 +139,7 @@ updateDate();
 setInterval(() => {
     updateDate();
 }, 500);
+
+function openlink(url) {
+    window.open(url, "_blank");
+}
