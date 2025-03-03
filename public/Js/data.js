@@ -102,8 +102,16 @@ function nekshor_style() {
         console.log(element)
         var eventDate = new Date(element.date);
         var endDate = new Date(eventDate.getTime() + 60 * 60 * 1000); // Ajoute 1 heure à la date de début
-        var url = "https://www.google.com/calendar/render?action=TEMPLATE&text=" + element.name + "&dates=" + eventDate.toISOString().replace(/-|:|\.\d+/g, "").replace(/T/g, "") + "/" + endDate.toISOString().replace(/-|:|\.\d+/g, "").replace(/T/g, "") + "&details=&location=&sf=true&output=xml";
-        console.log(url)
+
+        // Format the dates to 'YYYYMMDDTHHmmssZ'
+        var formatDate = function (date) {
+            return date.toISOString().replace(/-|:|\.\d+/g, "");
+        };
+
+        var url = "https://www.google.com/calendar/render?action=TEMPLATE&text=" + encodeURIComponent(element.name) +
+            "&dates=" + formatDate(eventDate) + "/" + formatDate(endDate) +
+            "&details=&location=&sf=true&output=xml";
+        console.log(url);
         newElement.setAttribute("onclick", "openlink('" + url + "')");
 
         newElement.appendChild(date);
