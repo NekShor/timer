@@ -139,6 +139,7 @@ h6 {
     border-radius: 15px;
     padding: 10px;
     margin: 20px;
+    transition-duration: 0.3s;
 }
 
 .nekshor p {

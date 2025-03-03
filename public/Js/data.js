@@ -39,7 +39,7 @@ function nekshor_style() {
         var jours_value = document.createElement("div");
         jours_value.classList.add("jours_value");
         jours_value.classList.add("dateTileValue");
-        jours_value.innerHTML = " ";
+        jours_value.innerHTML = "<br>";
         jours.appendChild(jours_value);
 
         var jours_text = document.createElement("div");
@@ -56,7 +56,7 @@ function nekshor_style() {
         var heures_value = document.createElement("div");
         heures_value.classList.add("heures_value");
         heures_value.classList.add("dateTileValue");
-        heures_value.innerHTML = " ";
+        heures_value.innerHTML = "<br>";
         heures.appendChild(heures_value);
 
         var heures_text = document.createElement("div");
@@ -73,7 +73,7 @@ function nekshor_style() {
         var minutes_value = document.createElement("div");
         minutes_value.classList.add("minutes_value");
         minutes_value.classList.add("dateTileValue");
-        minutes_value.innerHTML = " ";
+        minutes_value.innerHTML = "<br>";
         minutes.appendChild(minutes_value);
 
         var minutes_text = document.createElement("div");
@@ -90,7 +90,7 @@ function nekshor_style() {
         var secondes_value = document.createElement("div");
         secondes_value.classList.add("secondes_value");
         secondes_value.classList.add("dateTileValue");
-        secondes_value.innerHTML = " ";
+        secondes_value.innerHTML = "<br>";
         secondes.appendChild(secondes_value);
 
         var secondes_text = document.createElement("div");
