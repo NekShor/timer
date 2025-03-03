@@ -12,7 +12,7 @@ function nekshor_style() {
         var newElement = document.createElement("div");
         newElement.innerHTML = element.name;
         newElement.classList.add("nekshor");
-
+        console.log(newElement);
         newElement.addAttribute("data-importance", element.importance);
 
         var title = document.createElement("h1");
