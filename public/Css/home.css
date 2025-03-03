@@ -137,7 +137,24 @@ h6 {
 
 
 /* for mobile */
-@media only screen and (max-width: 768px) {}
+@media only screen and (max-width: 768px) {
+    .text {
+        /* font-size: 2em; */
+        font-weight: 600;
+        font-family: 'Poppins', sans-serif;
+        width: 95%;
+        font-size: 1.5em;
+
+    }
+
+    .nekshor .dateTileValue {
+        font-size: 2em;
+    }
+
+    .nekshor .dateTileText {
+        font-size: 0.9em;
+    }
+}
 
 @media only screen and (max-width: 1200px) and (min-width: 768px) {
     .text {
