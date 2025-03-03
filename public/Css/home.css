@@ -173,3 +173,13 @@ h6 {
     padding: 10px;
     margin: 20px;
 }
+
+.nekshor .dateTile {
+    background-color: white;
+    color: #1B2738;
+    border-radius: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+}
