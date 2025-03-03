@@ -178,6 +178,7 @@ h6 {
     display: flex;
     justify-content: center;
     align-items: center;
+    margin: 20px;
 }
 
 .nekshor .dateTile {
@@ -192,10 +193,22 @@ h6 {
     margin: 10px;
 }
 
-.nekshor .dateTileValue {
-    color: #8BD59E;
+.nekshor .dateTileValue {}
+
+.nekshor .dateTileText {}
+
+.nekshor .jours {
+    color: #bbdde2;
 }
 
-.nekshor .dateTileText {
-    color: #CFE0FF
+.nekshor .heures {
+    color: #b3dcd8;
+}
+
+.nekshor .minutes {
+    color: #abdacb;
+}
+
+.nekshor .secondes {
+    color: #a1d9bd;
 }
