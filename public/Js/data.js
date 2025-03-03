@@ -9,23 +9,28 @@ var date = [
 function nekshor_style() {
     date.forEach(element => {
         var date = new Date(element.date);
-        var now = new Date();
-        var diff = date - now;
-        if (diff < 0) {
-            return;
-        }
-        if (diff < 86400000) {
-            var color = "red";
-        } else if (diff < 172800000) {
-            var color = "orange";
-        } else if (diff < 259200000) {
-            var color = "yellow";
-        } else {
-            var color = "green";
-        }
-        var text = element.name + " " + element.date;
-        var importance = element.importance;
-        var style = "color: " + color + "; font-size: " + (importance * 10) + "px";
-        console.log("%c" + text, style);
+        var newElement = document.createElement("div");
+        newElement.innerHTML = element.name;
+        newElement.classList.add("nekshor");
+
+        newElement.addAttribute("data-importance", element.importance);
+
+        var title = document.createElement("h1");
+        title.innerHTML = element.name;
+        newElement.appendChild(title);
+
+        var date = document.createElement("p");
+        date.addAttribute("data-date", element.date);
+        date.classList.add("date");
+
+        newElement.appendChild(date);
+
+        var text = document.querySelector("#nekshor_style .text");
+        text.appendChild(newElement);
+
     });
 }
+
+document.addEventListener("DOMContentLoaded", function () {
+    nekshor_style();
+});
