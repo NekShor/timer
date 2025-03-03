@@ -99,6 +99,7 @@ function nekshor_style() {
         secondes_text.innerHTML = "Secondes";
         secondes.appendChild(secondes_text);
 
+        var eventDate = new Date(element.date);
         newElement.setAttribute("onclick", "openlink('https://www.google.com/calendar/render?action=TEMPLATE&text=" + element.name + "&dates=" + eventDate.toISOString().replace(/-|:|\.\d+/g, "").replace(/T/g, "/") + "/" + eventDate.toISOString().replace(/-|:|\.\d+/g, "").replace(/T/g, "/") + "&details=&location=&sf=true&output=xml)'");
 
         newElement.appendChild(date);
