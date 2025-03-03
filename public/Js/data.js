@@ -14,6 +14,11 @@ var date = [
 function nekshor_style() {
     date.forEach(element => {
         var date = new Date(element.date);
+        var now = new Date();
+        if (date < now) {
+            return;
+        }
+
         var newElement = document.createElement("div");
         newElement.classList.add("nekshor");
         newElement.setAttribute("data-importance", element.importance);
@@ -85,7 +90,7 @@ function nekshor_style() {
         var secondes_value = document.createElement("div");
         secondes_value.classList.add("secondes_value");
         secondes_value.classList.add("dateTileValue");
-        secondes_value.innerHTML = "
+        secondes_value.innerHTML = " ";
         secondes.appendChild(secondes_value);
 
         var secondes_text = document.createElement("div");
