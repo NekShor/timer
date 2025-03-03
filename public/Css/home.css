@@ -1,5 +1,8 @@
 body {
     background: linear-gradient(to right, #CFE0FF, #8BD59E);
+    margin: 0;
+    padding: 0;
+
 }
 
 .headerSubtitution {
