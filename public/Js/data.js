@@ -10,7 +10,6 @@ function nekshor_style() {
     date.forEach(element => {
         var date = new Date(element.date);
         var newElement = document.createElement("div");
-        newElement.innerHTML = element.name;
         newElement.classList.add("nekshor");
         newElement.setAttribute("data-importance", element.importance);
 
@@ -33,3 +32,16 @@ function nekshor_style() {
 document.addEventListener("DOMContentLoaded", function () {
     nekshor_style();
 });
+
+setTimeout(() => {
+    document.querySelectorAll(".date").forEach(element => {
+        var date = new Date(element.getAttribute("data-date"));
+        var now = new Date();
+        var diff = date - now;
+        var days = Math.floor(diff / (1000 * 60 * 60 * 24));
+        var hours = Math.floor(diff / (1000 * 60 * 60) % 24);
+        var minutes = Math.floor(diff / (1000 * 60) % 60);
+        var seconds = Math.floor(diff / 1000 % 60);
+        element.innerHTML = days + " days " + hours + " hours " + minutes + " minutes " + seconds + " seconds";
+    });
+}, 1000);

@@ -21,7 +21,7 @@ body {
     position: absolute;
     /* hide scroll bar */
     scrollbar-width: none;
-
+    padding-bottom: 300px;
 }
 
 
@@ -166,3 +166,8 @@ h6 {
 }
 
 @media only screen and (max-width: 1200px) and (min-width: 768px) {}
+
+.nekshor {
+    border: 2px solid white;
+    border-radius: 15px;
+}
