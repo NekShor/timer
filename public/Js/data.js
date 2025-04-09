@@ -8,6 +8,21 @@ var date = [
         "name": "Espagna Gang",
         "date": "2025-05-06 09:55:00",
         "importance": 1
+    },
+    {
+        "name": "Tournois de Béhourd",
+        "date": "2025-05-17 12:00:00",
+        "importance": 1
+    },
+    {
+        "name": "Dernier rendu CESI",
+        "date": "2025-07-28 12:00:00",
+        "importance": 1
+    },
+    {
+        "name": "Grand oral",
+        "date": "2025-09-18 12:00:00",
+        "importance": 1
     }
 ]
 
