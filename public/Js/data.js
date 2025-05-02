@@ -23,6 +23,11 @@ var date = [
         "name": "Grand oral",
         "date": "2025-09-18 12:00:00",
         "importance": 1
+    },
+    {
+        "name": "Foire de Caen",
+        "date": "2025-09-19 12:00:00",
+        "importance": 1
     }
 ]
 
